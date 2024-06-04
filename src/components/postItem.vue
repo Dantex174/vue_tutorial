@@ -4,7 +4,8 @@
             <div><strong>Название:</strong> {{post.title}}</div>
             <div><strong>Описание:</strong> {{post.body}}</div>
         </div>
-        <div>
+        <div class="post__btn">
+            <MyButtons @click="$router.push(`/posts/${post.id}`)" >Открыть</MyButtons>
             <MyButtons @click="$emit('remove', post)" >Удалить</MyButtons>
         </div>
     </div>
@@ -30,6 +31,10 @@ export default {
         display: flex;
         align-items: center;
         justify-content: space-between;
+    }
+
+    .post__btn {
+      display: flex;
     }
 
 </style>

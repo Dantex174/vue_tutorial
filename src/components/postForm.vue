@@ -4,7 +4,7 @@
             <!-- <input class="input" type="text" placeholder="Название" v-bind:value="title" @input="post.title = $event.target.value">
             <input class="input" type="text" placeholder="Описание" v-bind:value="body" @input="post.body = $event.target.value"> -->
 
-            <MyInput placeholder="Название" v-model="post.title"/>
+            <MyInput v-focus placeholder="Название" v-model="post.title"/>
             <MyInput placeholder="Описание" v-model="post.body"/>
             <MyButtons @click="createPost">Создать</MyButtons>
         </form>
